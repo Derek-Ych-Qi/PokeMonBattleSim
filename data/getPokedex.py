@@ -31,8 +31,8 @@ def _parseBaseValue(text):
 
 def _parseAbility(text):
     tmp = _extractContent(text, 'abilities: ')
-    tmp = tmp.replace('H', '2')
-    tmp = tmp.replace('S', '1') # for greninja
+    tmp = tmp.replace('H:', '2:')
+    tmp = tmp.replace('S:', '1:') # for greninja
     tmp = eval(tmp)
     res = OrderedDict()
     res['ability_1'] = tmp.get(0, '')
